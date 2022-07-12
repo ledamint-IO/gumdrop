@@ -1,9 +1,9 @@
-import { WalletError } from '@solana/wallet-adapter-base';
+import { WalletError } from '@j0nnyboi/wallet-adapter-base';
 import {
   useWallet,
   WalletProvider as BaseWalletProvider,
   WalletContextState,
-} from '@solana/wallet-adapter-react';
+} from '@j0nnyboi/wallet-adapter-react';
 import {
   getLedgerWallet,
   getMathWallet,
@@ -11,7 +11,7 @@ import {
   getSolflareWallet,
   getSolletWallet,
   getSolongWallet,
-} from '@solana/wallet-adapter-wallets';
+} from '@j0nnyboi/wallet-adapter-wallets';
 import { Button } from 'antd';
 import React, {
   createContext,

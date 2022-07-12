@@ -1,5 +1,5 @@
 const { sha256 } = require("js-sha256");
-const { Keypair, Message, PublicKey, Transaction } = require("@solana/web3.js");
+const { Keypair, Message, PublicKey, Transaction } = require("@safecoin/web3.js");
 const BN = require("bn.js");
 const bs58 = require("bs58");
 const nacl = require("tweetnacl");

@@ -9,7 +9,7 @@ import {
   CreateContactListCommand,
   GetContactCommand,
 } from '@aws-sdk/client-sesv2';
-import * as anchor from '@project-serum/anchor';
+import * as anchor from '@j0nnyboi/anchor';
 import * as discord from 'discord.js';
 import {
   Commitment,
@@ -19,7 +19,7 @@ import {
   SystemProgram,
   Transaction,
   TransactionInstruction,
-} from '@solana/web3.js';
+} from '@safecoin/web3.js';
 import BN from 'bn.js';
 import * as crypto from 'crypto';
 
