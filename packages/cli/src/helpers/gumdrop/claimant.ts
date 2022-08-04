@@ -4,15 +4,15 @@ import {
   PublicKey,
   SystemProgram,
   TransactionInstruction,
-} from '@safecoin/web3.js';
+} from '@solana/web3.js';
 import {
   AccountLayout,
   MintInfo,
   MintLayout,
   Token,
   u64,
-} from '@safecoin/safe-token';
-import * as anchor from '@j0nnyboi/anchor';
+} from '@solana/spl-token';
+import * as anchor from '@project-serum/anchor';
 import { sha256 } from 'js-sha256';
 import BN from 'bn.js';
 import * as bs58 from 'bs58';

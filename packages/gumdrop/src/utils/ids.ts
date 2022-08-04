@@ -1,4 +1,4 @@
-import { PublicKey } from '@safecoin/web3.js';
+import { PublicKey } from '@solana/web3.js';
 
 export const CANDY_MACHINE_ID = new PublicKey(
   'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',

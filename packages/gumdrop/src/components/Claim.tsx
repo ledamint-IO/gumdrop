@@ -18,7 +18,7 @@ import {
   TextField,
 } from '@mui/material';
 
-import { useAnchorWallet } from '@j0nnyboi/wallet-adapter-react';
+import { useAnchorWallet } from '@solana/wallet-adapter-react';
 import {
   AccountMeta,
   Connection as RPCConnection,
@@ -31,17 +31,17 @@ import {
   SYSVAR_RENT_PUBKEY,
   Transaction,
   TransactionInstruction,
-} from '@safecoin/web3.js';
+} from '@solana/web3.js';
 import {
   AccountLayout,
   MintLayout,
   Token,
   TOKEN_PROGRAM_ID,
-} from '@safecoin/safe-token';
+} from '@solana/spl-token';
 import { notify } from '../utils/notifications';
 import BN from 'bn.js';
 import * as bs58 from 'bs58';
-import * as anchor from '@j0nnyboi/anchor';
+import * as anchor from '@project-serum/anchor';
 
 import { useWindowDimensions } from './AppBar';
 import { CollapsePanel } from './CollapsePanel';

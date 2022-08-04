@@ -1,4 +1,4 @@
-import { AccountInfo } from '@safecoin/web3.js';
+import { AccountInfo } from '@solana/web3.js';
 import { chunks } from './common';
 
 export const getMultipleAccounts = async (

@@ -1,11 +1,11 @@
-import { Keypair, PublicKey } from '@safecoin/web3.js';
+import { Keypair, PublicKey } from '@solana/web3.js';
 import {
   SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID,
   TOKEN_METADATA_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
   GUMDROP_DISTRIBUTOR_ID,
 } from './constants';
-import * as anchor from '@j0nnyboi/anchor';
+import * as anchor from '@project-serum/anchor';
 import log from 'loglevel';
 
 export const getMetadata = async (

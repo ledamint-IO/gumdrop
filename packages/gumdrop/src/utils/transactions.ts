@@ -10,7 +10,7 @@ import {
   Transaction,
   TransactionInstruction,
   TransactionSignature,
-} from '@safecoin/web3.js';
+} from '@solana/web3.js';
 import log from 'loglevel';
 
 import { sleep } from './common';

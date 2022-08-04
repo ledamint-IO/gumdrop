@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 
-import { useWallet } from '@j0nnyboi/wallet-adapter-react';
-import { PublicKey, LAMPORTS_PER_SAFE } from '@safecoin/web3.js';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { PublicKey, LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { Button, Popover, Select, Tooltip } from 'antd';
 import Jazzicon from 'jazzicon';
 import { CopyOutlined } from '@ant-design/icons';
@@ -132,7 +132,7 @@ export const CurrentUserBadge = (props: {
   if (!wallet || !publicKey) {
     return null;
   }
-  const balance = (account?.lamports || 0) / LAMPORTS_PER_SAFE;
+  const balance = (account?.lamports || 0) / LAMPORTS_PER_SOL;
   const balanceInUSD = balance * solPrice;
   const iconStyle: React.CSSProperties = {
     display: 'flex',
@@ -156,7 +156,7 @@ export const CurrentUserBadge = (props: {
     <div className="wallet-wrapper">
       {props.showBalance && (
         <span>
-          {formatNumber.format((account?.lamports || 0) / LAMPORTS_PER_SAFE)} SOL
+          {formatNumber.format((account?.lamports || 0) / LAMPORTS_PER_SOL)} SOL
         </span>
       )}
 
@@ -329,7 +329,7 @@ export const CurrentUserBadgeMobile = (props: {
   if (!wallet || !publicKey) {
     return null;
   }
-  const balance = (account?.lamports || 0) / LAMPORTS_PER_SAFE;
+  const balance = (account?.lamports || 0) / LAMPORTS_PER_SOL;
   const balanceInUSD = balance * solPrice;
 
   const iconStyle: React.CSSProperties = {

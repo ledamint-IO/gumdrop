@@ -1,12 +1,12 @@
-import * as anchor from '@j0nnyboi/anchor';
-import { Connection, PublicKey } from '@safecoin/web3.js';
+import * as anchor from '@project-serum/anchor';
+import { Connection, PublicKey } from '@solana/web3.js';
 import {
   AccountLayout,
   MintInfo,
   MintLayout,
   Token,
   TOKEN_PROGRAM_ID,
-} from '@safecoin/safe-token';
+} from '@solana/spl-token';
 import BN from 'bn.js';
 
 import {

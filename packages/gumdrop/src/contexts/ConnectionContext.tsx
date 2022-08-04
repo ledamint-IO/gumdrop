@@ -6,14 +6,14 @@ import {
   TransactionInstruction,
   Blockhash,
   FeeCalculator,
-} from '@safecoin/web3.js';
+} from '@solana/web3.js';
 import React, { useContext, useEffect, useState } from 'react';
 import {
   TokenInfo,
   TokenListProvider,
   ENV as ChainId,
-} from '@safecoin/safe-token-registry';
-import { WalletNotConnectedError } from '@j0nnyboi/wallet-adapter-base';
+} from '@solana/spl-token-registry';
+import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 
 import { WalletSigner } from './WalletContext';
 import { useQuerySearch } from '../hooks/useQuerySearch';

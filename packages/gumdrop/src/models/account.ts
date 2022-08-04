@@ -1,6 +1,6 @@
-import { AccountInfo } from '@safecoin/web3.js';
+import { AccountInfo } from '@solana/web3.js';
 
-import { AccountInfo as TokenAccountInfo } from '@safecoin/safe-token';
+import { AccountInfo as TokenAccountInfo } from '@solana/spl-token';
 
 export interface TokenAccount {
   pubkey: string;
