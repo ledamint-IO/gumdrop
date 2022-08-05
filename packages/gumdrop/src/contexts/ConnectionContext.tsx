@@ -6,14 +6,14 @@ import {
   TransactionInstruction,
   Blockhash,
   FeeCalculator,
-} from '@solana/web3.js';
+} from '@safecoin/web3.js';
 import React, { useContext, useEffect, useState } from 'react';
 import {
   TokenInfo,
   TokenListProvider,
   ENV as ChainId,
-} from '@solana/spl-token-registry';
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
+} from '@j0nnyboi/safe-token-registry';
+import { WalletNotConnectedError } from '@j0nnyboi/wallet-adapter-base';
 
 import { WalletSigner } from './WalletContext';
 import { useQuerySearch } from '../hooks/useQuerySearch';
@@ -36,13 +36,18 @@ export type Endpoint = {
 export const ENDPOINTS: Array<Endpoint> = [
   {
     name: 'mainnet-beta',
-    url: 'https://api.metaplex.solana.com',
+    url: 'https://mainnet-beta.safecoin.org',
     chainId: ChainId.MainnetBeta,
   },
   {
     name: 'devnet',
-    url: 'https://metaplex.devnet.rpcpool.com/',
+    url: 'https://devnet.safecoin.org/',
     chainId: ChainId.Devnet,
+  },
+  {
+    name: 'testnet',
+    url: 'https://testnet.safecoin.org/',
+    chainId: ChainId.Testnet,
   },
 ];
 
@@ -178,7 +183,7 @@ export const explorerLinkCForAddress = (
 ) => {
   return (
     <a
-      href={`https://explorer.solana.com/address/${key}?cluster=${envFor(
+      href={`https://explorer.safecoin.org/address/${key}?cluster=${envFor(
         connection,
       )}`}
       target="_blank"

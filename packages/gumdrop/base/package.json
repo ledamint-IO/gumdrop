@@ -1,0 +1,31 @@
+{
+    "name": "@j0nnyboi/wallet-adapter-base",
+    "version": "0.5.1",
+    "author": "Solana Maintainers <maintainers@safecoin.foundation>",
+    "repository": "https://github.com/solana-labs/wallet-adapter",
+    "license": "Apache-2.0",
+    "main": "lib/index.js",
+    "esnext": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib",
+        "src"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "clean": "rm -rf lib/*",
+        "build": "yarn clean && tsc"
+    },
+    "peerDependencies": {
+        "@safecoin/web3.js": "^1.44.0"
+    },
+    "dependencies": {
+        "eventemitter3": "^4.0.7"
+    },
+    "devDependencies": {
+        "@safecoin/web3.js": "^1.44.0"
+    },
+    "gitHead": "4e46f44d180bda0f9ca4d20e48f62759a9af4c2c"
+}

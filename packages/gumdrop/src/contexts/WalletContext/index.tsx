@@ -1,17 +1,12 @@
-import { WalletError } from '@solana/wallet-adapter-base';
+import { WalletError } from '@j0nnyboi/wallet-adapter-base';
 import {
   useWallet,
   WalletProvider as BaseWalletProvider,
   WalletContextState,
-} from '@solana/wallet-adapter-react';
+} from '@j0nnyboi/wallet-adapter-react';
 import {
-  getLedgerWallet,
-  getMathWallet,
-  getPhantomWallet,
-  getSolflareWallet,
   getSolletWallet,
-  getSolongWallet,
-} from '@solana/wallet-adapter-wallets';
+} from '@j0nnyboi/wallet-adapter-wallets';
 import { Button } from 'antd';
 import React, {
   createContext,
@@ -47,7 +42,7 @@ export const WalletModal: FC = () => {
     setVisible(false);
   }, [setVisible]);
 
-  const phatomWallet = useMemo(() => getPhantomWallet(), []);
+  const SafeWallet = useMemo(() => getSolletWallet(), []);
 
   return (
     <MetaplexModal title="Connect Wallet" visible={visible} onCancel={close}>
@@ -67,17 +62,17 @@ export const WalletModal: FC = () => {
       <Button
         className="phantom-button metaplex-button"
         onClick={() => {
-          console.log(phatomWallet.name);
-          select(phatomWallet.name);
+          console.log(SafeWallet.name);
+          select(SafeWallet.name);
           close();
         }}
       >
-        <img src={phatomWallet?.icon} style={{ width: '1.2rem' }} />
-        &nbsp;Connect to Phantom
+        <img src={SafeWallet?.icon} style={{ width: '1.2rem' }} />
+        &nbsp;Connect to Safecoin
       </Button>
       <CollapsePanel id="other-wallets" panelName="Other Wallets">
         {wallets.map((wallet, idx) => {
-          if (wallet.name === 'Phantom') return null;
+          if (wallet.name === 'Sollet') return null;
 
           return (
             <Button
@@ -151,11 +146,6 @@ export const WalletModalProvider: FC<{ children: ReactNode }> = ({
 export const WalletProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const wallets = useMemo(
     () => [
-      getPhantomWallet(),
-      getSolflareWallet(),
-      getLedgerWallet(),
-      getSolongWallet(),
-      getMathWallet(),
       getSolletWallet(),
     ],
     [],

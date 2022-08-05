@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { useConnectionConfig } from '../contexts/ConnectionContext';
-import { TokenInfo, TokenListContainer } from '@solana/spl-token-registry';
-import { WRAPPED_SOL_MINT } from '@project-serum/serum/lib/token-instructions';
+import { TokenInfo, TokenListContainer } from '@j0nnyboi/safe-token-registry';
+import { WRAPPED_SAFE_MINT } from '@j0nnyboi/serum/lib/token-instructions';
 
 // Tag in the spl-token-registry for sollet wrapped tokens.
 export const SPL_REGISTRY_SOLLET_TAG = 'wrapped-sollet';
@@ -32,8 +32,8 @@ export function SPLTokenListProvider({
   const [tokenList, setTokenList] = useState<TokenListContainer | null>(null);
 
   const subscribedTokenMints = process.env.NEXT_SPL_TOKEN_MINTS
-    ? [WRAPPED_SOL_MINT, ...process.env.NEXT_SPL_TOKEN_MINTS.split(',')]
-    : [WRAPPED_SOL_MINT];
+    ? [WRAPPED_SAFE_MINT, ...process.env.NEXT_SPL_TOKEN_MINTS.split(',')]
+    : [WRAPPED_SAFE_MINT];
 
   const { tokens } = useConnectionConfig();
 

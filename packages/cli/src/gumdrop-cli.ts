@@ -9,7 +9,7 @@ import {
   CreateContactListCommand,
   GetContactCommand,
 } from '@aws-sdk/client-sesv2';
-import * as anchor from '@project-serum/anchor';
+import * as anchor from '@j0nnyboi/anchor';
 import * as discord from 'discord.js';
 import {
   Commitment,
@@ -19,7 +19,7 @@ import {
   SystemProgram,
   Transaction,
   TransactionInstruction,
-} from '@solana/web3.js';
+} from '@safecoin/web3.js';
 import BN from 'bn.js';
 import * as crypto from 'crypto';
 
@@ -95,7 +95,7 @@ programCommand('create')
   .option(
     '--host <string>',
     'Website to claim gumdrop',
-    'https://gumdrop.metaplex.com/',
+    'https://gumdrop.ledamint.io/',
   )
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   .action(async (options, cmd) => {
@@ -304,7 +304,7 @@ programCommand('create')
     } else {
       console.log(
         'gumdrop creation succeeded',
-        `https://explorer.solana.com/tx/${createResult.txid}?cluster=${options.env}`,
+        `https://explorer.safecoin.org/tx/${createResult.txid}?cluster=${options.env}`,
       );
     }
 
@@ -389,7 +389,7 @@ programCommand('close')
     } else {
       console.log(
         'gumdrop close succeeded',
-        `https://explorer.solana.com/tx/${closeResult.txid}?cluster=${options.env}`,
+        `https://explorer.safecoin.org/tx/${closeResult.txid}?cluster=${options.env}`,
       );
     }
   });
@@ -452,7 +452,7 @@ programCommand('recover_update_authority')
     } else {
       console.log(
         'gumdrop recover succeeded',
-        `https://explorer.solana.com/tx/${recoverResult.txid}?cluster=${options.env}`,
+        `https://explorer.safecoin.org/tx/${recoverResult.txid}?cluster=${options.env}`,
       );
     }
   });

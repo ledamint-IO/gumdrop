@@ -10,8 +10,8 @@
     "moduleResolution": "node",
     "typeRoots": ["types", "../../types", "../../node_modules/@types"],
     "paths": {
-      "@bundlr-network/client/*": [
-        "./node_modules/@bundlr-network/client/build/*"
+      "@j0nnyboi/client/*": [
+        "./node_modules/@j0nnyboi/client/build/*"
       ]
     }
   }

@@ -1,15 +1,15 @@
-import { PublicKey } from '@solana/web3.js';
+import { PublicKey } from '@safecoin/web3.js';
 
 export const CANDY_MACHINE_ID = new PublicKey(
-  'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
+  'CaNucwHEE2Mc7CPMSbNkrqPEx2iDoMs1uCDtS4mPdDq7',
 );
 
 export const GUMDROP_DISTRIBUTOR_ID = new PublicKey(
-  'gdrpGjVffourzkdDRrQmySw4aTHr8a3xmQzzxSwFD1a',
+  'GuMAcJgxGZLMSuRA5sUDnEMQ59NskXrMEJfEEMdNtSP2',
 );
 
 export const TOKEN_PROGRAM_ID = new PublicKey(
-  'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  'ToKLx75MGim1d1jRusuVX8xvdvvbSDESVaNXpRA9PHN',
 );
 
 export const GUMDROP_TEMPORAL_SIGNER = new PublicKey(
@@ -17,9 +17,9 @@ export const GUMDROP_TEMPORAL_SIGNER = new PublicKey(
 );
 
 export const SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID = new PublicKey(
-  'ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL',
+  'AToD9iqHSc2fhEP9Jp7UYA6mRjHQ4CTWyzCsw8X3tH7K',
 );
 
 export const TOKEN_METADATA_PROGRAM_ID = new PublicKey(
-  'metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s',
+  'WbMTNyvtk8vSMu2AmXV7mKuYrADRNw9GSkNtWKsZ7qe',
 );

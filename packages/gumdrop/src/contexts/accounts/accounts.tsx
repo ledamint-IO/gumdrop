@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useWallet } from '@solana/wallet-adapter-react';
-import { AccountInfo } from '@solana/web3.js';
+import { useWallet } from '@j0nnyboi/wallet-adapter-react';
+import { AccountInfo } from '@safecoin/web3.js';
 
 import { useConnection } from '../ConnectionContext';
 

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { Button, Modal } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
-import { useWallet } from '@solana/wallet-adapter-react';
+import { useWallet } from '@j0nnyboi/wallet-adapter-react';
 
 import closeSvg from './close.svg';
 import {
